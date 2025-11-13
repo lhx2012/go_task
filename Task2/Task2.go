@@ -4,5 +4,6 @@ func Run() {
 	//pointRun()
 	//goroutineRun()
 	//OOPRun()
-	StructInheritRun()
+	//StructInheritRun()
+	channelRun()
 }
