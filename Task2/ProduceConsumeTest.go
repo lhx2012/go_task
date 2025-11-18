@@ -20,10 +20,10 @@ func ProduceConsumeRun() {
 	}
 
 	//等待所有生产者完成
-	wg.Wait()
-
-	//关闭通道，通知消费者不在有新的数据
-	close(message)
+	//wg.Wait()
+	//
+	////关闭通道，通知消费者不在有新的数据
+	//close(message)
 
 	//var wgConsumer sync.WaitGroup
 	//启动10个消费者
@@ -32,13 +32,13 @@ func ProduceConsumeRun() {
 		go consumer(i, message, &wg)
 	}
 
-	wg.Wait()
-
-	////等待所有生产者完成
 	//wg.Wait()
+
+	//等待所有生产者完成
+	wg.Wait()
 	//
 	////关闭通道，通知消费者不在有新的数据
-	//close(message)
+	close(message)
 
 	time.Sleep(1 * time.Second)
 	fmt.Println("所有任务都处理完成")
