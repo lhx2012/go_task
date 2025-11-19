@@ -9,7 +9,9 @@ func Entry() {
 	//var db *gorm.DB = InitDB()
 	////StudentRun(db)
 	//BankRun(db)
-	Sqlx1Run()
+	//Sqlx1Run()
+	//sqlxRun2()
+	blogRun()
 }
 
 func InitDB() *gorm.DB {
