@@ -44,7 +44,7 @@ func Login(c *gin.Context) {
 		response.Error(c, error2.ErrInvalidParams)
 		return
 	}
-	logic.UserLogic.Login(&req)
+
 	resp, err := logic.UserLogic.Login(&req)
 	if err != nil {
 		response.Fail(c, error2.ErrSystem.Code, "登录失败")

@@ -25,14 +25,14 @@ curl -X POST 'http://localhost:8888/api/v1/auth/login' \
 ```
 
 返回内容：
-{"code":200,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI"}}
+{"code":200,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo"}}
 
 ## 分页查询所有用户
 
 ```bash
 curl -X GET 'http://localhost:8888/api/v1/user/page?page=1&pageSize=10' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI'
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo'
 ```
 
 ## 创建文章
@@ -40,7 +40,7 @@ curl -X GET 'http://localhost:8888/api/v1/user/page?page=1&pageSize=10' \
 ```shell  
 curl -X POST 'http://localhost:8888/api/v1/post/create' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo' \
   -d '{
     "title": "我的第二篇文章",
     "content": "这是文章内容..."
@@ -55,7 +55,7 @@ curl -X POST 'http://localhost:8888/api/v1/post/create' \
 ```shell  
 curl -X GET 'http://localhost:8888/api/v1/post/page?page=1&pageSize=10' \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo" \
   -d '{
     "userID": 2
   }'
@@ -66,7 +66,8 @@ curl -X GET 'http://localhost:8888/api/v1/post/page?page=1&pageSize=10' \
 ```shell  
 curl -X GET 'http://localhost:8888/api/v1/post/byId?postId=1' \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo"
+
 ```
 
 ## 更新单元文章
@@ -74,7 +75,7 @@ curl -X GET 'http://localhost:8888/api/v1/post/byId?postId=1' \
 ```shell  
 curl -X POST 'http://localhost:8888/api/v1/post/edit' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo' \
   -d '{
     "id": 1,
     "title": "我的第一篇文章",
@@ -87,7 +88,7 @@ curl -X POST 'http://localhost:8888/api/v1/post/edit' \
 ```shell  
 curl -X GET 'http://localhost:8888/api/v1/post/delete?postId=1' \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo"
 ```
 
 ## 创建评论
@@ -95,7 +96,7 @@ curl -X GET 'http://localhost:8888/api/v1/post/delete?postId=1' \
 ```shell  
 curl -X POST 'http://localhost:8888/api/v1/comment/create' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo' \
   -d '{
     "userId": 2,
     "postId": 2,
@@ -108,5 +109,5 @@ curl -X POST 'http://localhost:8888/api/v1/comment/create' \
 ```shell  
 curl -X GET 'http://localhost:8888/api/v1/comment/byPostId?postId=2' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc2MjA2NTU2MH0.WJBACO6i4iboQDe8bw7py3URMwqjwj1Ul_ROFyS-jSI'
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc2Mzg3NjY1Mn0.h-hVWjMdXkIn323AeC-wPtM3AkFyyi9Ezm6u7XKoMOo'
 ```
