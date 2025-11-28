@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "num",
+						"type": "int256"
+					}
+				],
+				"name": "ConvertToRoman",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Solidity/IntConvertRoman.sol": "IntConvertRoman"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Solidity/IntConvertRoman.sol": {
+			"keccak256": "0x1eaa07f7449b1cb56fc0d507fc19c51e90a965758cfa415acc90a20f6cf2b006",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0f1f0e56e0014761bdc0ce2afac3a1603c69c8f989637ec53f136215124ca06",
+				"dweb:/ipfs/QmWQnUg4w8QLwsAbtB8MREVhnztA5C5WRZKzDK6mPHsTPL"
+			]
+		}
+	},
+	"version": 1
+}
